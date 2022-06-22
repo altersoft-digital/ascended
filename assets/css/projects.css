@@ -72,6 +72,12 @@
     grid-auto-flow: column;
     align-items: center;
     grid-gap: 24px;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--main-black);
 }
 
 .btn-light-projects:hover {

@@ -82,10 +82,15 @@ body {
     border: none;
     background: none;
     outline: none;
-    font-size: 18px;
-    color: var(--main-black);
     transition: 0.2s ease-in-out;
     cursor: pointer !important;
+}
+
+.btn a,
+.btn span,
+.btn {
+    color: var(--main-black);
+    font-size: 18px;
 }
 
 .btn-light-secondary {
@@ -96,6 +101,11 @@ body {
 
 .btn-light-secondary:hover {
     background-color: var(--main-black);
+    color: var(--white);
+}
+
+.btn-light-secondary:hover>a,
+.btn-light-secondary:hover>span {
     color: var(--white);
 }
 
@@ -130,12 +140,16 @@ body {
     color: var(--grey-light-1);
 }
 
+.text-16 {
+    font-size: 16px;
+}
+
 .right-bottom-floating-buttons-container {
     display: grid;
     grid-gap: 24px;
     align-items: center;
     justify-items: center;
-    position: absolute;
+    position: fixed;
     right: 64px;
     bottom: 64px;
     z-index: 2;
@@ -147,4 +161,11 @@ h2 {
     font-weight: 500;
     font-size: 64px;
     color: var(--main-black);
+}
+
+#btn-burger-menu {
+    position: fixed;
+    right: 64px;
+    top: 60px;
+    z-index: 2;
 }
