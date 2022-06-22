@@ -1,6 +1,7 @@
 :root {
     --white: #fff;
     --main-black: #001423;
+    --main-black-2: #00233E;
     --main-blue: #008FFF;
     /* LIGHT VARIABLES */
     --grey-light-1: #4D5B66;
@@ -168,4 +169,47 @@ h2 {
     right: 64px;
     top: 60px;
     z-index: 2;
+}
+
+.inpt-regular {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(0, 20, 35, 0.1);
+    color: var(--main-black);
+    font-family: 'Mont';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 12px 0;
+}
+
+.inpt-regular:focus {
+    border-bottom: 2px solid rgb(0, 20, 35);
+}
+
+.inpt-regular::placeholder {
+    color: var(--grey-light-1);
+}
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+.btn-light-primary {
+    background-color: var(--main-black);
+    padding: 24px 64px;
+    color: var(--white);
+    border-radius: 100px;
+    transition: 0.2s ease-in-out;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.btn-light-primary:hover {
+    background-color: var(--main-blue);
 }
