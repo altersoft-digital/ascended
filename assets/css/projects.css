@@ -1,0 +1,97 @@
+.projects-container-main {
+    display: flex;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    gap: 80px;
+}
+
+.project-item {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-item img {
+    width: 40vw;
+    height: 30vw;
+}
+
+.project-item:first-child {
+    padding-left: 216px;
+}
+
+.project-item:last-child {
+    padding-right: 216px;
+}
+
+.project-item:first-child .project-overlay {
+    left: 216px;
+}
+
+.project-item:last-child .project-overlay {
+    right: 216px;
+}
+
+.project-overlay {
+    width: 40vw;
+    height: 30vw;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 20, 35, 0.8), rgba(0, 20, 35, 0.8));
+    border-radius: 16px;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-gap: 40px;
+    justify-content: center;
+    justify-items: center;
+    display: none;
+    animation-name: animateprojectoverlay;
+    animation-duration: 0.2s;
+}
+
+.project-overlay h3 {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 82px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn-light-projects {
+    padding: 20px 32px;
+    background-color: #fff;
+    border-radius: 100px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 24px;
+}
+
+.btn-light-projects:hover {
+    background-color: var(--main-blue);
+    color: var(--white);
+}
+
+.btn-light-projects:hover>svg path {
+    fill: var(--white);
+}
+
+.project-item:hover>.project-overlay {
+    display: grid;
+}
+
+@keyframes animateprojectoverlay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

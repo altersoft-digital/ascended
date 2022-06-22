@@ -1,0 +1,150 @@
+:root {
+    --white: #fff;
+    --main-black: #001423;
+    --main-blue: #008FFF;
+    /* LIGHT VARIABLES */
+    --grey-light-1: #4D5B66;
+    --grey-light-2: #99A1A7;
+    --grey-light-3: #F7F8F8;
+    /* DARK VARIABLES */
+    --black-dark-1: #00050A;
+    --black-dark-2: #0D1216;
+    --grey-dark-1: #B2B4B5;
+    --grey-dark-2: #66696C;
+}
+
+*::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: var(--main-black);
+}
+
+::selection {
+    color: var(--white);
+    background: var(--main-black);
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../fonts/Mont-Book.otf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('../fonts/Mont-SemiBold.otf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Mont';
+    font-weight: 500;
+    scrollbar-width: 0;
+}
+
+html {
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+    /* cursor: none; */
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1920px;
+    overflow-x: hidden;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin: 0 64px;
+}
+
+.outer-container {
+    max-width: 1616px;
+    margin: auto;
+}
+
+.btn {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    color: var(--main-black);
+    transition: 0.2s ease-in-out;
+    cursor: pointer !important;
+}
+
+.btn-light-secondary {
+    padding: 18px 32px;
+    border: 1px solid rgba(0, 20, 35, 0.1);
+    border-radius: 100px;
+}
+
+.btn-light-secondary:hover {
+    background-color: var(--main-black);
+    color: var(--white);
+}
+
+.btn-circle {
+    border-radius: 100px;
+    width: 64px;
+    height: 64px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.btn-light-filled {
+    background-color: var(--main-black);
+}
+
+.btn-light-filled.btn-circle:hover {
+    background-color: var(--main-blue);
+}
+
+.p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-grey-light-1 {
+    color: var(--grey-light-1);
+}
+
+.right-bottom-floating-buttons-container {
+    display: grid;
+    grid-gap: 24px;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    right: 64px;
+    bottom: 64px;
+    z-index: 2;
+}
+
+h2 {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    color: var(--main-black);
+}
