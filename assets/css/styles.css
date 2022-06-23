@@ -127,6 +127,38 @@ body {
     background-color: var(--main-blue);
 }
 
+.btn-light-outline {
+    border: 1px solid var(--main-black);
+}
+
+.btn-light-outline.btn-circle:hover {
+    background-color: var(--main-black);
+}
+
+#btn-scrolltop {
+    display: none;
+    transition: 0.2s ease-in-out;
+    animation: scrolltopactive;
+    animation-duration: 0.5s;
+}
+
+@keyframes scrolltopactive {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.show {
+    display: block !important;
+}
+
+.btn-light-outline.btn-circle:hover>svg path {
+    fill: var(--white);
+}
+
 .p {
     font-weight: 500;
     font-size: 18px;

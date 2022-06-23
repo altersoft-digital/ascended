@@ -3,12 +3,13 @@ function scrollToTop() {
 }
 
 
-let btn = document.querySelector('');
+let btn = document.querySelector('#btn-scrolltop');
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
+
+document.addEventListener('scroll', function(e) {
+    if (window.scrollY > 300) {
+        btn.style.display = "grid";
     } else {
-        btn.removeClass('show');
+        btn.style.display = "none";
     }
 });
