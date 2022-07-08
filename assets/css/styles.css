@@ -245,3 +245,17 @@ textarea {
 .btn-light-primary:hover {
     background-color: var(--main-blue);
 }
+
+
+/* ABOVE HEADER NOTIFICATION */
+
+.section-above-header-notification {
+    background-color: var(--main-black);
+    padding: 16px;
+    display: grid;
+    justify-items: center;
+}
+
+.section-above-header-notification p {
+    color: var(--white);
+}

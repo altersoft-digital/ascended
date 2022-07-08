@@ -101,3 +101,26 @@
         opacity: 1;
     }
 }
+
+#project-item-view-more button a {
+    background-color: var(--main-black);
+    height: 30vw;
+    padding: 32px;
+    border-radius: 16px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+#project-item-view-more button a span {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    transform: rotateZ(-90deg);
+    width: 100%;
+}
+
+#project-item-view-more button a:hover {
+    background-color: var(--main-blue);
+}

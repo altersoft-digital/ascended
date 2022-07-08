@@ -1,0 +1,68 @@
+.popup-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 20, 35, 0.4);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-content: center;
+}
+
+.popup {
+    display: none;
+    background-color: var(--white);
+    padding: 52px 64px;
+    border-radius: 32px;
+    width: 45vw;
+}
+
+.popup-header {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.popup-header button {
+    justify-self: end;
+}
+
+.popup-header h3 {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--main-black);
+}
+
+.popup-main-content {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--main-black);
+    margin: 52px 0 40px 0;
+}
+
+.popup-main-content a {
+    font-weight: 600;
+    color: var(--main-blue);
+    transition: 0.2s ease-in-out;
+}
+
+.popup-main-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials-container-popup {
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.show-popup {
+    display: grid;
+}

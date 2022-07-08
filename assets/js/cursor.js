@@ -3,7 +3,7 @@ let delayInMilliseconds = 100;
 const onMouseMove = (event) => {
     setTimeout(function() {
         cursor.style.left = event.pageX + 'px';
-        cursor.style.top = event.pageY + 'px';
+        cursor.style.top = event.pageY - window.scrollY + 'px';
     }, delayInMilliseconds);
 
     // console.log(event.target);
