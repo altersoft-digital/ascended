@@ -4,8 +4,37 @@ function openpopup(popup) {
     document.querySelector('body').style.overflowY = 'hidden';
 }
 
+let pop = document.querySelectorAll(".popup");
+
 function closepopup(popup) {
-    document.querySelector('.popup-overlay').classList.remove('show-popup');
-    document.querySelector(popup).classList.remove('show-popup');
-    document.querySelector('body').style.overflowY = 'auto';
+    if (popup == 'all') {
+        pop.forEach(pop => {
+            pop.classList.remove('show-popup');
+        })
+        document.querySelector('body').style.overflowY = 'auto';
+        document.querySelector('.popup-overlay').classList.remove('show-popup');
+    } else {
+        document.querySelector('.popup-overlay').classList.remove('show-popup');
+        document.querySelector(popup).classList.remove('show-popup');
+        document.querySelector('body').style.overflowY = 'auto';
+    }
 }
+
+
+pop.forEach(pop => {
+    pop.addEventListener("click", function(e) {
+        e = window.event || e;
+        if (this === e.target) {
+            e.stopPropagation();
+        }
+    });
+    child = pop.childNodes;
+    child.forEach(child => {
+        child.addEventListener("click", function(e) {
+            e = window.event || e;
+            if (this === e.target) {
+                e.stopPropagation();
+            }
+        });
+    })
+})

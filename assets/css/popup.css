@@ -8,12 +8,12 @@
     right: 0;
     background: rgba(0, 20, 35, 0.4);
     z-index: 2000;
-    display: none;
+    display: grid;
     justify-content: center;
     align-content: center;
 }
 
-.popup {
+.popup-beta-version {
     display: none;
     background-color: var(--white);
     padding: 52px 64px;
@@ -65,4 +65,75 @@
 
 .show-popup {
     display: grid;
+}
+
+
+/* MENU */
+
+.popup-menu {
+    background-color: var(--white);
+    padding: 64px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 800px;
+}
+
+.popup-menu-header {
+    display: grid;
+    justify-items: end;
+}
+
+.popup-menu-nav {
+    width: 100%;
+    margin-top: 76px;
+}
+
+.popup-menu-nav ul li a {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    padding: 24px 0;
+    border-top: 1px solid rgba(0, 20, 35, 0);
+    border-bottom: 1px solid rgba(0, 20, 35, 0);
+    transition: 0.2s ease-in-out;
+}
+
+.popup-menu-nav ul li a span {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--main-black);
+}
+
+.popup-menu-nav ul li a img {
+    justify-self: end;
+    display: none;
+    animation-name: menuArrowAnimate;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+}
+
+.popup-menu-nav ul li a:hover {
+    border-top-width: 1px;
+    border-top-style: solid;
+    /* rgba(0, 20, 35, 0.1) */
+    border-image: linear-gradient(to right, red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+}
+
+.popup-menu-nav ul li a:hover>img {
+    display: block;
+}
+
+@keyframes menuArrowAnimate {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
